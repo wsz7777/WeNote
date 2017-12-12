@@ -12,7 +12,11 @@
 
 ### yum
 
-`yum`是Cent OS中的包管理工具。
+`yum`是`Cent OS`中的包管理工具。
+
+### Homebrew
+
+`homebrew`是`Mac OS`中的包管理器
 
 
 
