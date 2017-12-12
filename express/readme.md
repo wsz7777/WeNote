@@ -1,8 +1,6 @@
-<!-- TOC -->
+[TOC]
 
-- [express](#express)
 
-<!-- /TOC -->
 
 # express
 

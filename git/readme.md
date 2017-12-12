@@ -1,8 +1,6 @@
-<!-- TOC -->
+[TOC]
 
-- [git](#git)
 
-<!-- /TOC -->
 
 # git
 

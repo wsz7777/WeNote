@@ -1,8 +1,6 @@
-<!-- TOC -->
+[TOC]
 
-- [VS Code](#vs-code)
 
-<!-- /TOC -->
 
 # VS Code
 
