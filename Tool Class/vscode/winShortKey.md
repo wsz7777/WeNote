@@ -1,4 +1,4 @@
-# VS Code shortcuts[^key1]-windows
+# VS Code shortcuts[^1]-windows
 [TOC]
 
 ## 全局 global
@@ -167,4 +167,5 @@
 | Shift+PgUp / PgDown | 向上/向下滚动页面 Scroll page up/down      |
 | Ctrl+Home / End     | 滚动到顶部/底部 Scroll to top/bottom      |
 
-[^key1]: 快捷键英文为 accelerators 和 shortcut key 两种。此处使用shortcuts（第二种简写方式）。
+[^1]: 快捷键英文为 accelerators 和 shortcut key 两种。此处使用shortcuts（第二种简写方式）。
+

@@ -3,7 +3,7 @@
 # VS Code config.json
 config.json即配置文件，不多说上干货
 
-```
+```Json
 // 将设置放入此文件中以覆盖默认设置
 {
     // 基础配置star
