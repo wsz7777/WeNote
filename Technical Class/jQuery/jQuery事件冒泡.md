@@ -27,6 +27,11 @@ $(".alertbg").children().on("touchend", function() {
 这样直接`return false`去停止默认事件发生，这样也可以实现篇头的效果。
 
 建议：如果是在开发阶段记得在每个按钮绑定完事件后加`return false`不过大家还是要搞清需求之后再确定取消。
+
+> 2017.12.13新增补充
+>
+> `keyup`、`keydown`等事件不适合用`return false;`来解决。他会阻止掉你的输入结果的实现。
+
 ## 另一种阻止默认事件发生的方法
 ```javascript
 $('input[type="submit"]').on("click", function(event) {
