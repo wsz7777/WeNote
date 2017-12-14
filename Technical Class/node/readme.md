@@ -3,4 +3,4 @@
 
 
 # node
-应为node js变得无比强大
+因为node， js变得无比强大。
