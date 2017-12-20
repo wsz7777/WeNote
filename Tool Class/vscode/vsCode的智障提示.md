@@ -18,7 +18,7 @@
 
 打开`VS Code`，然后进入`首选项` —>`键盘快捷方式`（或者直接`command K+command S` 打开`windows`用户把`command`替换为`CtrL`键）然后打开高级自定义的文件 `keybindings.json` （该入口在搜索框下的灰色提示）加一段代码：
 
-```
+```javascript
 {  
 	"key": "tab",                     
 	"command": "editor.emmet.action.expandAbbreviation",                        
@@ -26,3 +26,6 @@
 }
 ```
 
+## 新版vscode
+
+1.19版本以后的 `vscode` 在`Emmet`语法上做的不错了，默认建议为第一项，不过还是有些地方不是很舒服。不过一直在往好的方向改进，加油，期待明年更强大的 `VS Code` 的出世
