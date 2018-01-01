@@ -41,7 +41,17 @@ git add --all
 
 git commit -m"update message"
 
+git remote	// 查看远程仓库名称
+
 git push gitee master
 # git push [仓库名称] [分支名称]
+
+git push origin master
+# git push [仓库名称] [分支名称]
+
+# 更新工作区文件
+git pull origin master
+# git pull [仓库名称] [分支名称]
+# master 为默认主分支
 ```
 
