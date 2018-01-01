@@ -24,6 +24,7 @@
 ```
 
 git clone git@gitee.com:wsz7777/WeNote.git
+cd WeNote	// 进入到WeNote目录下 或者用vscode新建窗口打开
 
 git config user.name "your userName"
 git config user.email "your userEmail"
