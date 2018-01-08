@@ -1,7 +1,7 @@
 [TOC]
 
-# VS Code config.json
-config.json即配置文件
+# VS Code setting.json
+
 
 ## VS Code 设置简介
 
@@ -22,6 +22,7 @@ config.json即配置文件
     "editor.minimap.enabled": false,//是否显示右侧代码缩略图
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Solarized Light",
+  	"workbench.editor.enablePreview": false,//打开一个文件直接进入编辑而不是预览
     "window.zoomLevel": 0,
     // 基础配置end
 
@@ -30,34 +31,34 @@ config.json即配置文件
     "easysass.formats": [
       	{
             "format": "expanded",//编译至css文件的格式，expanded:不压缩 | conpressed:压缩
-            "extension": ".css"//生成css文件的后缀名
+            "extension": ".css"//生成css文件的后缀名,例如可以写成"min.css"
         }
-        // eg：
-        //压缩scss编译的css
-        // {
-        //     "format": "compressed",
-        //     "extension": ".min.css"
-        // },
-        //不压缩scss编译的css
-        // {
-        //     "format": "compressed",
-        //     "extension": ".css"
-        // }
     ],
     // 生成的css的存放目录
     "easysass.targetDir": "./css/",
     
-    // 控制台，工作面板设置
-    "workbench.editor.enablePreview": false,// 控制是否将打开的编辑器显示为预览
-    "workbench.panel.location": "bottom",// 控制台在底部显示
+  	// easy less 编译 less 的插件配置
+	"less.compile": {
+		"compress":  true,	// 是否压缩
+		"out": "../css/",	// 输出到那个目录下，相对于less文件所在文件夹
+		"outExt": ".css",	// 编译后生成css文件的文件后缀名
+		"relativeUrls": true,	// 文件中的图片路径是否相对编译后的文件重新定向
+		"sourceMap": true,	// 生成css.map文件 便于纠错
+		"autoprefixer": "> 5%, last 2 Chrome versions, not ie 6-9" 
+      		// 编译文件中属性自动添加兼容性前缀。此处仅作为语法列举，实际应用写成"> 5%"即可
+      		// 请下载 autoprefixer 插件才能生效
+    }
+  
+  	// jshint 的设置
+  	"jshint.options": {
+        "esversion": 6,	// 选择ES6的版本
+        "eqeqeq": true	// 启用全等检测 推荐使用"===" 使用"=="会警告
+    },
     
     // 一些图标设置
     "vsicons.projectDetection.autoReload": true,
     "vsicons.presets.angular": true,
     "vsicons.presets.tsOfficial": true,
-    "vsicons.presets.jsonOfficial": true,
-    
-    
     
     // 操作文件的设置
     "explorer.confirmDragAndDrop": false,//拖动文件||文件夹时 是否要确认

@@ -1,7 +1,8 @@
 /**
-调用方式：   $('拖拽块').arrangeable({
-                dragSelector: '可拖拽区域'
-            });
+ *  调用方式：   
+ *      $('拖拽块').arrangeable({
+ *          dragSelector: '可拖拽区域'
+ *      });
  */
 'use strict';
 (function(factory) {
