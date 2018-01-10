@@ -36,6 +36,23 @@ git branch
 
 ```shell
 #　提交
+git add --all
+git commit -m "creat git-4 使用分支"
 
+# 切回主分支
+git checkout master
+Switched to branch 'master'
+
+# 合并至当前分支
+git merge dev
+Updating 6c6e19b..8d4362f
+Fast-forward
+ Tool Class/git/使用git-4（使用分支）.md | 41 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 41 insertions(+)
+ create mode 100644 Tool Class/git/使用git-4（使用分支）.md
+
+# 删除开发分支
+git branch -d dev
+Deleted branch dev (was 8d4362f).
 ```
 
