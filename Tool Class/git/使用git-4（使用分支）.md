@@ -54,5 +54,8 @@ Fast-forward
 # 删除开发分支
 git branch -d dev
 Deleted branch dev (was 8d4362f).
+
+# 最后提交代码(gitee 是我的远程仓库名)
+git push gitee master
 ```
 
