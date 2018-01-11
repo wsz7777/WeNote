@@ -21,8 +21,7 @@
 
 参照流程一一对应
 
-```
-
+```shell
 git clone git@gitee.com:wsz7777/WeNote.git
 cd WeNote	// 进入到WeNote目录下 或者用vscode新建窗口打开
 
@@ -43,15 +42,29 @@ git commit -m"update message"
 
 git remote	// 查看远程仓库名称
 
-git push gitee master
-# git push [仓库名称] [分支名称]
-
 git push origin master
-# git push [仓库名称] [分支名称]
 
 # 更新工作区文件
-git pull origin master
-# git pull [仓库名称] [分支名称]
-# master 为默认主分支
+git pull origin master  // master 为默认主分支
 ```
 
+## 小结
+```shell
+# 拿到项目
+git clone [仓库链接]
+
+# 保存文件至暂存区
+git add [路径+文件名]
+
+# 从暂存区提交代码至本地仓库
+git commit -m "message"
+
+# 查看远程仓库名称
+git remote
+
+# 提交代码至远程仓库
+git push [仓库名称] [分支名称]
+
+# 从远程仓库拉取代码
+git pull [仓库名称] [分支名称]
+```

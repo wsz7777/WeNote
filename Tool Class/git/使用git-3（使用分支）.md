@@ -61,3 +61,24 @@ Deleted branch dev (was 8d4362f).
 git push gitee master
 ```
 
+## 小结
+
+``` shell
+# 查看分支：
+git branch
+
+# 创建分支：
+git branch <brachName>
+
+# 切换分支：
+git checkout <branchName>
+
+# 创建+切换分支：
+git checkout -b <branchName>
+
+# 合并某分支到当前分支：
+git merge <brachName>
+
+# 删除分支：
+git branch -d <branchName>
+```
