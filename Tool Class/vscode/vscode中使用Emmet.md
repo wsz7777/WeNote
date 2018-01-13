@@ -6,7 +6,7 @@
 
 ​	加速`html,css,xml`开发的工具类语法。他的目的是让我们写`html,css,xml`更快、更便捷。原理很简单通过一些简单的标记配合自动生成从而使我们的开发更迅速。之所以说是语法是应为有迹可循，如果是无迹可寻的标记，那我们也不会称之为语法了。在这篇文章里我不会大篇幅的讲述什么具体的标记，我觉得掌握核心就抓住了这个理念的所有。
 
-​	在vscode中或是其他支持Emmet语法的编辑器中使用Emmet，只需输完Emmet语法的字符串后打一个`tab`键，自动生成。在vscode中更好的配置请参照[vsCode的智障提示](http://www.gitee.com/wsz7777/WeNote/Tool Class/vscode/vsCode的智障提示.md)
+​	在vscode中或是其他支持Emmet语法的编辑器中使用Emmet，只需输完Emmet语法的字符串后打一个`tab`键，自动生成。在vscode中更好的配置请参照[vsCode的智障提示](http://www.gitee.com/wsz7777/WeNote/Tool%20Class/vscode/vsCode的智障提示.md)
 
 ## 规则
 
