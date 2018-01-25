@@ -288,6 +288,7 @@ var express = require('express');
 
 
 输入账号和密码，点击submit
-​          	 ![](https://ws1.sinaimg.cn/large/005GmWtAly1fnrtk2ukkzj307a06oglg.jpg)
+
+   ![](https://ws1.sinaimg.cn/large/005GmWtAly1fnrtk2ukkzj307a06oglg.jpg)
 
 大工告成！！！！
