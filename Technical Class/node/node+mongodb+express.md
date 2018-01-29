@@ -20,9 +20,11 @@ PATH”；“改变量值：
 
 在最后面添加【C:\Program Files\nodejs】（根据自己的安装目录而定）”。
 
-打开cmd直接运行命令：  
+打开cmd直接运行命令：
 
-​				node    -v
+```shell
+node -v
+```
 
 显示：  
 
@@ -71,15 +73,13 @@ PATH”；“改变量值：
 
 了，所以提供了快速生成器：express-generator
 
-````
-1、通过命令：npm install express-generator -g 安装到全局
-2、在用express 命令生成项目结构，express myapp 其中的myapp是你的项目名称
-3、通过cd myapp 进入项目文件中
-   通过npm install 初始化依赖模块
-   通过set DEBUG=myapp & npm start 启动web服务器
-4、在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了。
-   默认情况下用的模版引擎是jade，项目里也已经配置好了这个模版。    
-````
+> 1. 通过命令：npm install express-generator -g 安装到全局
+> 2. 在用express 命令生成项目结构，express myapp 其中的myapp是你的项目名称
+> 3. 通过cd myapp 进入项目文件中
+>    1. 通过npm install 初始化依赖模块
+>    2. 通过set DEBUG=myapp & npm start 启动web服务器
+> 4. 在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了。
+> 5. 默认情况下用的模版引擎是jade，项目里也已经配置好了这个模版。    
 
 myapp的项目结构如下：
 
@@ -112,27 +112,32 @@ myapp的项目结构如下：
 2.  简单的下一步进行安装(我的在d盘安装的)，有默认的就让其默认，有选择的就全选了。
 3.  然后配置环境变量，和node的一样不再累述。
 4.  接下来在mongodb文件夹中创建一个 data 文件夹，再在 data 文件夹中创建 db 文件夹，打开CMD命令行
->  d:
->  cd mongodb\bin
->  mongod -dbpath D:\mongodb\data\db
+```shell
+d:
+cd mongodb\bin
+mongod -dbpath D:\mongodb\data\db
+```
 
-5、在打开一个CMD命令行：
->  d:
->  cd mongodb\bin
->  mongo
+5. 在打开一个CMD命令行：
 
-6、这就可以用了。这边会很麻烦，每次用命令打开服务。我们只需要使用以下命令将MongoDB安装成为 
+```shell
+d:
+cd mongodb\bin
+mongo
+```
+
+6. 这就可以用了。这边会很麻烦，每次用命令打开服务。我们只需要使用以下命令将MongoDB安装成为 
 
    Windows服务：
 
-```
-首先 cd mongodb\bin
-然后 mongod --logpath "D:\mongodb\data\logs.txt" --logappend --dbpath "D:\mongodb\data" --directoryperdb --serviceName "MongoDB" --serviceDisplayName "MongoDB" --install
-控制台会输出：
+```shell
+cd mongodb\bin
+mongod --logpath "D:\mongodb\data\logs.txt" --logappend --dbpath "D:\mongodb\data" --directoryperdb --serviceName "MongoDB" --serviceDisplayName "MongoDB" --install
+# 控制台会输出：
 		Creating service MongoDB.
 		Service creation successful.
 		Service can be started from the command line via 'net start "MongoDB"'.
-Windows服务的名称：MongoDB；		
+# Windows服务的名称：MongoDB；		
 ```
 
 以后我们启动服务： `net start MongoDB`
@@ -151,16 +156,16 @@ Windows服务的名称：MongoDB；
 
 再接着就是在项目中连接刚才创建的数据库了
 
-在项目根目录下创建一个的文件夹 database ，然后在创建一个db.js
+在项目根目录下创建一个的文件夹 database ，然后在创建一个db.js，mongoose模块大家可能要安装一下
 
-> mongoose模块大家可能要安装一下
->
-> cd myapp
->
-> npm install mongoose
+```shell
+cd myapp
+npm install mongoose
+```
+
+db.js：
 
 ````js
-//db.js
 var mongoose = require('mongoose');			
 var db = mongoose.connect('mongodb://localhost/chihuo');//；连接数据库
 var Schema = mongoose.Schema;   //  创建模型
@@ -239,44 +244,47 @@ exports.user = db.model('users', userScheMa); //  与users集合关联
 
 ````js
 var express = require('express');
-  var router = express.Router();
-  var user = require('../database/db').user;
+var router = express.Router();
+var user = require('../database/db').user;
 
 
-	/* GET home page. */
-  router.get('/', function(req, res) {
-	    res.render('index', { title: 'index' });
-  });
+/* GET home page. */
+router.get('/', function(req, res) {
+	res.render('index', { title: 'index' });
+});
 
-  /* login */
-  router.get('/login', function(req, res) {
-	    res.render('login', { title: 'login' });
-  });
+/* login */
+router.get('/login', function(req, res) {
+	res.render('login', { title: 'login' });
+});
 
-  /* ucenter */
-  router.post('/ucenter', function(req, res) {
-		  var query = {name: req.body.name, password: req.body.password};
-		  (function(){
-				  user.count(query, function(err, doc){    //count返回集合中文档的数量，和 find 一样可以接收查询条件。query 表示查询的条件
-						if(doc == 1){
-							console.log(query.name + ": 登陆成功 " + new Date());
-							res.render('ucenter', { title:'ucenter' });
-						}else{
-							console.log(query.name + ": 登陆失败 " + new Date());
-							res.redirect('/');
-						}
-			  	});
-		  })(query);
-  });
+/* ucenter */
+router.post('/ucenter', function(req, res) {
+	var query = {name: req.body.name, password: req.body.password};
+	(function(){
+		//count返回集合中文档的数量，和 find 一样可以接收查询条件。query 表示查询的条件
+		user.count(query, function(err, doc){
+			if(doc == 1){
+				console.log(query.name + ": 登陆成功 " + new Date());
+				res.render('ucenter', { title:'ucenter' });
+			}else{
+				console.log(query.name + ": 登陆失败 " + new Date());
+				res.redirect('/');
+			}
+		});
+	})(query);
+});
   
-  module.exports = router;
+module.exports = router;
 ````
 
 #### 六、启动项目
-> d:
-> cd myapp
-> npm start
-> 浏览器输入：http://localhost:3000/
+```shell
+d:
+cd myapp
+npm start
+# 浏览器输入：http://localhost:3000/
+```
 
 显示：
 
