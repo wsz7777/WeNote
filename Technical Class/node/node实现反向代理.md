@@ -60,17 +60,17 @@ let
 		http.createServer((req, res) => {
 			let
 				url = req.url,
-				host = url;
+				host = req.headers.host;
 
 			// 在这里可以自定义你的路由分发  
 			switch (host) {
-				case 'pc':
+				case 'pc.wsz7777.cn':
 					proxy.web(req, res, { target: 'http://localhost:9001' });
 					break;
-				case 'mobile':
+				case 'mobile.wsz7777.cn':
 					proxy.web(req, res, { target: 'http://localhost:9002' });
 					break;
-				case 'app':
+				case 'app.wsz7777.cn':
 					proxy.web(req, res, { target: 'http://localhost:9003' });
 					break;
 				default:
