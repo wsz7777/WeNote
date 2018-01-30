@@ -149,10 +149,10 @@ mongod --logpath "D:\mongodb\data\logs.txt" --logappend --dbpath "D:\mongodb\dat
 
 ​      在刚才的打开的mongodb数据库中输入：
 
-> use mydb        \创建一个叫chihuo的数据库
-> db.createCollection(“users”)     \创建一个集合
-> db.users.insert({“name”:“root”,“password”:“root”})     \给users集合添加一个文档
-> db.users.find()      \查询你添加的文档   
+> use mydb        //创建一个叫chihuo的数据库    
+> db.createCollection(“users”)     //创建一个集合    
+> db.users.insert({“name”:“root”,“password”:“root”})     //给users集合添加一个文档  
+> db.users.find()      //查询你添加的文档   
 
 再接着就是在项目中连接刚才创建的数据库了
 
