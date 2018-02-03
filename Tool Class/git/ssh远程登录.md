@@ -24,7 +24,7 @@ ls -al		# 查看有没有.ssh目录
 # 如果没有
 mkdir .ssh	# 创建.ssh目录
 cd .ssh		# 进入.ssh目录
-touch authorized_keys	# 清空该文件
+touch authorized_keys	# 创建该文件
 ```
 
 ### A客户机操作
