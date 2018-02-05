@@ -39,6 +39,16 @@ scp ~/.ssh/id_rsa.pub root@Bhost:./.ssh/id_rsa.pub	# 传输密钥至服务器
 
 至此密钥设置成功
 
+### B服务器中设置
+
+```shell
+# 在之前操作的目录下
+cat id_rsa.pub
+ssh-rsa ******************** ***@**.com
+# 把ssh-rsa--.com这段密钥复制至authorized_keys文件中
+vi authorized_keys	# 打开此文件 把密钥粘贴进去ok
+```
+
 ## 测试
 
 客户机中操作
