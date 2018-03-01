@@ -8,4 +8,6 @@
 - Mac OS
 - Ubantu
 
-git 测试
+## 服务
+
+​	基于 Linux 的服务很多，此处列举几个最基础的 `ssh`  `ftp`  `http` 以及其他
