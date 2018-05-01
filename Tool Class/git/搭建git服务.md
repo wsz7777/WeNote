@@ -8,7 +8,7 @@
 
 ### 1 将git设置为默认路径
 
-```shell
+```bash
 ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack
 ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack
 ```
@@ -23,7 +23,7 @@ ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack
 
 ​	作用是：用来运行 `git` 服务。
 
-```shell
+```bash
 groupadd git
 useradd git -g git
 passwd git    # 这里的参数为用户名
@@ -34,7 +34,7 @@ su git
 
 ### 3 设置文件权限
 
-```shell
+```bash
 cd /home/git/
 mkdir .ssh #新建文件夹
 chmod 700 .ssh 
@@ -44,7 +44,7 @@ chmod 600 .ssh/authorized_keys
 
 ### 4 开放ssh登录
 
-```shell
+```bash
 # 生成密钥请参考《使用git-1（基础）》或自行百度
 # 查看密钥
 cat ~/.ssh/id_rsa.pub
@@ -55,7 +55,7 @@ vim /etc/ssh/sshd_config
 
 ​	 在 `sshd_config` 文件中搜到以下三行代码把它们前面的注释符去掉
 
-```shell
+```bash
 RSAAuthentication yes
 PubkeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
@@ -66,7 +66,7 @@ AuthorizedKeysFile .ssh/authorized_keys
 
 ### 5 初始化Git仓库
 
-```shell
+```bash
 cd /home/git
 git init --bare test.git
 # git init --bare <git仓库名称（以.git结尾）>
@@ -74,7 +74,7 @@ git init --bare test.git
 
 ### 6 客户机测试
 
-```shell
+```bash
 git clone git@123.206.33.197:test.git
 # git clone username@ip:gitPath
 # gitPath 默认在 /home/username/ 目录下
@@ -84,13 +84,13 @@ git clone git@123.206.33.197:test.git
 
 ​	注意在生产过程中不希望有任何人通过 `shell` 登录 `git` 用户进行一些改动防止出现直接删掉所有 `git` 仓库或者其他情况影响 `git` 仓库的正常使用。所以禁止任何人通过 `shell` 登录 `git` 。
 
-```shell
+```bash
 vim /etc/passwd
 ```
 
 在该文件中找到
 
-```shell
+```bash
 git:x:502:502::/home/git:/bin/bash
 # 替换成
 git:x:502:502::/home/git:/usr/local/git/bin/git-shell

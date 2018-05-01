@@ -8,13 +8,13 @@
 
 ​	在 `Linux` 系统中安装 `ftp` 的服务
 
-```shell
+```bash
 yum install vsftpd -y
 ```
 
 ## Start ftp
 
-```shell
+```bash
 # 开启 ftpServer
 service vsftpd start
 
@@ -29,7 +29,7 @@ telnet [公网 IP] [ftp服务的端口号]
 
 ## Change config file
 
-```shell
+```bash
 vim /etc/vsftpd/vsftpd.conf
 # anonymous_enable=YES 改为 anonymous_enable=NO
 # 输入 :wq 保存退出
@@ -39,7 +39,7 @@ service vsftpd restart
 
 ## add ftpUser
 
-```shell
+```bash
 useradd -m -d /home/ftpuser -s /sbin/nologin ftpuser
 # useradd -m -d [登录直接进入的目录] -s [使用的shell] 用户名
 passwd ftpuser
@@ -50,7 +50,7 @@ passwd ftpuser
 
 ## 控制权限
 
-```shell
+```bash
 vim /etc/vsftpd/vsftpd.conf
 # 打开配置文件
 ```
@@ -64,7 +64,7 @@ vim /etc/vsftpd/vsftpd.conf
  ### 修改用户ftp访问区域权限
 ​	找到 `#chroot_local_user=YES` ,删除前面的那个#号,表示开启,用户只能访问直接登录的目录
 
-```shell
+```bash
 # 最后 重启ftp服务
 service vsftpd restart
 ```

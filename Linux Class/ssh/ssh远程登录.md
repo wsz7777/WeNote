@@ -18,7 +18,7 @@
 
 ### B服务器中操作
 
-```shell
+```bash
 cd ~/		# 进到用户目录下
 ls -al		# 查看有没有.ssh目录
 # 如果没有
@@ -29,7 +29,7 @@ touch authorized_keys	# 创建该文件
 
 ### A客户机操作
 
-```shell
+```bash
 cd ~/.ssh	# 进入到自己电脑下的.ssh文件夹
 ls -al		# 查看有无 id_rsa id_rsa.pub 这两个文件
 # 如果没有这两个文件
@@ -41,7 +41,7 @@ scp ~/.ssh/id_rsa.pub root@Bhost:./.ssh/id_rsa.pub	# 传输密钥至服务器
 
 ### B服务器中设置
 
-```shell
+```bash
 # 在之前操作的目录下
 cat id_rsa.pub
 ssh-rsa ******************** ***@**.com
@@ -53,7 +53,7 @@ vi authorized_keys	# 打开此文件 把密钥粘贴进去ok
 
 客户机中操作
 
-```shell
+```bash
 ssh root@Bhost
 # ssh <用户名>@<服务器ip>
 ```
@@ -64,7 +64,7 @@ ssh root@Bhost
 
 ​	各位同学纷纷表示不想记辣么长的ip地址、想使用自定义名称~~~请在自己电脑（客户机）中操作
 
-```shell
+```bash
 vim ~/.ssh/config	# 打开(或者新建)ssh的配置文件
 
 # 在该文件中添加以下内容

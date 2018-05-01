@@ -16,7 +16,7 @@
 
 ### 环境准备
 
-```shell
+```bash
 # 安装依赖
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 yum install gcc perl-ExtUtils-MakeMaker
@@ -27,7 +27,7 @@ yum remove git
 
 ### 安装最新版git
 
-```shell
+```bash
 # 创建git文件夹
 cd /usr/local/
 mkdir git

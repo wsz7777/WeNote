@@ -21,7 +21,7 @@
 
 参照流程一一对应
 
-```shell
+```bash
 git clone git@gitee.com:wsz7777/WeNote.git
 cd WeNote	// 进入到WeNote目录下 或者用vscode新建窗口打开
 
@@ -49,7 +49,7 @@ git pull origin master  // master 为默认主分支
 ```
 
 ## 小结
-```shell
+```bash
 # 拿到项目
 git clone [仓库链接]
 

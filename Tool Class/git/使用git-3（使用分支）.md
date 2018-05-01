@@ -11,7 +11,7 @@
 
 ### 创建分支
 
-```shell
+```bash
 # 创建 dev 分支
 git checkout -b dev
 Switched to a new branch 'dev'
@@ -36,7 +36,7 @@ git branch
 
 ### 提交代码即合并分支
 
-```shell
+```bash
 #　提交
 git add --all
 git commit -m "creat git-4 使用分支"

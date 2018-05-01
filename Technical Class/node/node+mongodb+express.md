@@ -22,7 +22,7 @@ PATH”；“改变量值：
 
 打开cmd直接运行命令：
 
-```shell
+```bash
 node -v
 ```
 
@@ -112,7 +112,7 @@ myapp的项目结构如下：
 2.  简单的下一步进行安装(我的在d盘安装的)，有默认的就让其默认，有选择的就全选了。
 3.  然后配置环境变量，和node的一样不再累述。
 4.  接下来在mongodb文件夹中创建一个 data 文件夹，再在 data 文件夹中创建 db 文件夹，打开CMD命令行
-```shell
+```bash
 d:
 cd mongodb\bin
 mongod -dbpath D:\mongodb\data\db
@@ -120,7 +120,7 @@ mongod -dbpath D:\mongodb\data\db
 
 5. 在打开一个CMD命令行：
 
-```shell
+```bash
 d:
 cd mongodb\bin
 mongo
@@ -130,7 +130,7 @@ mongo
 
    Windows服务：
 
-```shell
+```bash
 cd mongodb\bin
 mongod --logpath "D:\mongodb\data\logs.txt" --logappend --dbpath "D:\mongodb\data" --directoryperdb --serviceName "MongoDB" --serviceDisplayName "MongoDB" --install
 # 控制台会输出：
@@ -158,7 +158,7 @@ mongod --logpath "D:\mongodb\data\logs.txt" --logappend --dbpath "D:\mongodb\dat
 
 在项目根目录下创建一个的文件夹 database ，然后在创建一个db.js，mongoose模块大家可能要安装一下
 
-```shell
+```bash
 cd myapp
 npm install mongoose
 ```
@@ -279,7 +279,7 @@ module.exports = router;
 ````
 
 #### 六、启动项目
-```shell
+```bash
 d:
 cd myapp
 npm start

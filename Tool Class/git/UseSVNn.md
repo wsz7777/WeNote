@@ -16,7 +16,7 @@
 
 ​	 `svn` 只有本地仓库和远程仓库之分，没有 `git` 中的 `工作区` 和 `暂存区` 这两个概念。你可以看作 `svn` 是 `git` 的化简版，把 `git` 中的 `工作区` 、 `暂存区` 和 `本地仓库` 合并为一个——  `本地仓库` 。操作比 `git` 简化很多，具体情况往下看吧~
 
-```shell
+```bash
 # 示例：
 [可选参数] 
 <参数作用>
@@ -28,7 +28,7 @@
 
 ​	这步和 `git` 上有一点小区别~可以以用户名密码的方式直接拉取，操作命令是 `checkout` ，而且不需要指明分支名称。这让我感觉起来像是每一次拉取都是创建一个副本，你提交的时候并不是在操作主代码而是在副本中操作。所有人共用的是同一个版本的代码无法自己创建分支，类似于在 `git` 中仅使用 `master` 分支开发的状况。而 `git` 是所有人手中的都是这个项目的一部分，所有人的代码合起来才是这个项目的完整版，但是单个分开也是可以正常运行的。从结构上来讲 `git` 更符合分工合作的概念。
 
-```shell
+```bash
 svn checkout <项目代码仓库的路径> [--username=<用户名>] [--password=<密码>]
 # 简写
 svn co <地址> --username=<用户名> --password=<密码>
@@ -38,7 +38,7 @@ svn co <地址> --username=<用户名> --password=<密码>
 
 ​	你写完代码保存后这时候如果你这个文件夹（或者文件）不是新建的状态那就不需要添加文件至本地仓库也就是 `git add —all` 这步操作，直接 `commit` 即可。
 
-```shell
+```bash
 svn add <文件名>
 # 有新添加文件的情况建议使用以下命令比较快速完成所有文件的添加
 svn add *
@@ -52,7 +52,7 @@ svn add *
 
 ### 3. 提交文件
 
-```shell
+```bash
 svn commit -m "提交信息" <提交文件名>
 # 注意提交信息要超过十个字符
 # 简写(提交所有文件)
@@ -62,14 +62,14 @@ svn ci -m "message to update this file" *
 
 ### 4. 查看日志
 
-```shell
+```bash
 svn log		# 查看文件夹日志
 svn log [文件名]	# 查看文件日志
 ```
 
 ### 5. 更新
 
-```shell
+```bash
 svn update
 # 简写
 svn up
@@ -77,7 +77,7 @@ svn up
 
 ### 6. 查看本地仓库状态
 
-```shell
+```bash
 svn status
 # 简写
 svn st
@@ -85,13 +85,13 @@ svn st
 
 ### 7. 删除文件
 
-```shell
+```bash
 svn delete <文件名/文件夹名>
 ```
 
 ### 8. 撤销命令
 
-```shell
+```bash
 svn revert <文件名/文件夹名>
 ```
 
@@ -101,7 +101,7 @@ svn revert <文件名/文件夹名>
 
 ​	先更新（`update`）再提交（`commit`）。 `git` 中也同样先 `pull` 再 `push` 。
 
-```shell
+```bash
 Select: (p) postpone, (df) diff-full, (e) edit,
         (mc) mine-conflict, (tc) theirs-conflict,
         (s) show all options:
@@ -121,7 +121,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 解决：
 
-```shell
+```bash
 # 打开1.m文件，根据冲突内容进行修改即可.
 # 重点 ： 一定要删除这几行 
 <<<<<<< .mine

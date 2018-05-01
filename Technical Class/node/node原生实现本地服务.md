@@ -65,7 +65,7 @@ http.createServer((request, response) => {	// 创建一个http的Server
 
 切换到控制台：
 
-```shell
+```bash
 # 执行：
 node app.js
 # 退出进程按两次 ctrl + c
