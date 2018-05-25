@@ -10,7 +10,7 @@
 
 安装之前先卸载全局的node
 
-```Linux
+```Bash
 #查看已经安装在全局的模块，以便删除这些全局模块后再按照不同的 node 版本重新进行全局安装
 npm ls -g --depth=0 
 
@@ -31,13 +31,13 @@ cd  /usr/local/bin && ls -l | grep "../lib/node_modules/" | awk '{print $9}'| xa
 
 用curl安装
 
-```Linux
+```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.7/install.sh | bash
 ```
 
 用wget安装
 
-```Linux
+```Bash
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.7/install.sh | bash
 ```
 
@@ -47,7 +47,7 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.7/install.sh | 
 
 默认下载最新版本
 
-```
+```Bash
 nvm install node
 ```
 
@@ -59,13 +59,13 @@ nvm install node
 
 先用vim打开配置文件
 
-```linux
+```bash
 vi ~/.bash_profile
 ```
 
 在打开文件中添加：
 
-```Linux
+```bash
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 ```
 
