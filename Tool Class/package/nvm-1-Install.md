@@ -1,8 +1,8 @@
 [TOC]
 
-# NVM
+# 安装NVM
 
-`mvn`官方版本只支持`Linux`以及`Linux`的各种发行版本。在`window`下用`nvm`请移步`nvm-windows`
+NVM（Node Version Manager，Node版本管理器） `mvn`官方版本只支持`Linux`以及`Linux`的各种发行版本。在`window`下用`nvm`请移步`nvm-windows` 。
 
 
 
