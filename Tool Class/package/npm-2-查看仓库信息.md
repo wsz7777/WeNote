@@ -10,7 +10,7 @@
 $ npm search <package-name>
 ```
 
-![npmSearchImg](/Volumes/jacky/WeNote/images/npmSearchImg.png)
+![npmSearchImg](./images/npmSearchImg.png)
 
 ​	这样直接可以搜索到你想要找的包。注意！！！使用这个命令的时候必须使用NPM官方镜像，不会用更换镜像源的请移步[nrm的安装与使用](./nrm安装与使用.md)。如果不想每次都换源玩，有两种方法：第一，翻墙~这个自行探索；第二，在每次搜索的时候在命令最后添加 `--registry=https://registry.npmjs.org/` ，当然个人觉得这种方法好，但是。。。很麻烦昂。
 
@@ -20,6 +20,6 @@ $ npm search <package-name>
 $ npm view <package-name>
 ```
 
-![npmViewImg](/Volumes/jacky/WeNote/images/npmViewImg.png)
+![npmViewImg](./images/npmViewImg.png)
 
 ​	详细信息如图所示。

@@ -21,11 +21,11 @@ $ nrm ls	# 列出所有镜像源
 $ nrm use <name>	# 使用哪一个镜像源
 ```
 
-![nrmUse](../../images/nrmUse.png)
+![nrmUse](./images/nrmUse.png)
 
 更换一下使用镜像源，然后我们来列出镜像列表查看一下：
 
-![nrmUse-2](../../images/nrmUse-2.png)
+![nrmUse-2](./images/nrmUse-2.png)
 
 前面标记带 `*` 的为正在使用中的镜像。还可以使用 `nrm current` 命令查看当前使用的镜像源名称。
 
@@ -40,7 +40,7 @@ $ nrm add <镜像名> <url> [首页url]
 $ nrm del <镜像名>
 ```
 
-![nrmUseAdd](../../images/nrmUseAdd.png)
+![nrmUseAdd](./images/nrmUseAdd.png)
 
 注：此例以百度首页举个例子，实际服务不可用！
 
