@@ -13,19 +13,41 @@
 // 将设置放入此文件中以覆盖默认设置
 {
     // 基础配置star
-    // 编辑时的设置
+    // 编辑区的设置
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
         "strings": true
     },
     "editor.minimap.enabled": false,//是否显示右侧代码缩略图
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Solarized Light",
-  	"workbench.editor.enablePreview": false,//打开一个文件直接进入编辑而不是预览
+    "editor.snippetSuggestions": "top",// 提示中代码段优先展示
+    "zenMode.centerLayout": false,// 在全屏模式（cmd+k z）中是否启用居中模式
     "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,//控制在资源管理器内拖放移动文件或文件夹时是否进行确认。
+    "explorer.confirmDelete": false,//控制资源管理器是否应在删除文件到废纸篓时进行确认。
+    
+    // 工作台配置
+    "workbench.iconTheme": "material-icon-theme",//指定图标主题 属性为插件名称
+    "workbench.colorTheme": "One Dark Pro Vivid",//指定代码颜色主题 属性为插件名
+  	"workbench.editor.enablePreview": false,//打开一个文件直接进入编辑而不是预览
+    "workbench.editor.closeEmptyGroups": false,// 关闭最后一个标签时仍保留布局方式
+    "workbench.editor.openSideBySideDirection": "right",// 拆分布局时，在右侧新增窗口
+    
+     // 操作文件的设置
+    "explorer.confirmDragAndDrop": false,//拖动文件||文件夹时 是否要确认
+    "explorer.confirmDelete": false, // 删除文件时是否要确认
+    
+    // emmet 的设置
+    "emmet.triggerExpansionOnTab": true,// 按下 tab 键将展开 emmet 缩写
+	"emmet.showSuggestionsAsSnippets": true,// 提供 emmet 语法编译后的预览
+    "emmet.includeLanguages": {// 在默认不支持 Emmet 的语言中启用 Emmet 缩写功能
+        "vue-html": "html",// 将 vue-html 和 html 关联映射
+        "vue": "html"//将 vue 和 html 关联映射
+    }
+    
     // 基础配置end
 
+    
     // some 进阶配置
     // easysass 编译scss&&sass的插件配置
     "easysass.formats": [
@@ -34,8 +56,7 @@
             "extension": ".css"//生成css文件的后缀名,例如可以写成"min.css"
         }
     ],
-    // 生成的css的存放目录
-    "easysass.targetDir": "./css/",
+    "easysass.targetDir": "./css/",// 生成的css的存放目录
     
   	// easy less 编译 less 的插件配置
 	"less.compile": {
@@ -55,21 +76,6 @@
         "eqeqeq": true	// 启用全等检测 推荐使用"===" 使用"=="会警告
     },
     
-    // 一些图标设置
-    "vsicons.projectDetection.autoReload": true,
-    "vsicons.presets.angular": true,
-    "vsicons.presets.tsOfficial": true,
-    
-    // 操作文件的设置
-    "explorer.confirmDragAndDrop": false,//拖动文件||文件夹时 是否要确认
-    "explorer.confirmDelete": false, // 删除文件时是否要确认
-    
-    // emmet 的设置
-    "emmet.triggerExpansionOnTab": true,// 按下tab键将展开emmet缩写
-    "emmet.includeLanguages": {// 在默认不支持 Emmet 的语言中启用 Emmet 缩写功能
-        "vue-html": "html",// 将 vue-html 和 html 关联映射
-        "vue": "html"//将 vue 和 html 关联映射
-    }
 }
 ```
 
