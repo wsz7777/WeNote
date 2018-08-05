@@ -13,8 +13,9 @@
 ## 类型
 
 - ECMAScript
-- BOM
-- DOM
-- Global
+- Web API 
+  - DOM  = >  document
+  - BOM  = >  window
+- Node  = >  global
 
-核心为`ECMAScript`。剩下两种可以理解为浏览器以及文档转换而来的`API`接口操作。现在的`js`多了`node`这个平台，那么还有一些操作系统环境的`API`即`Global`部分。在这儿不多做介绍了，具体内容移步`node`部分阅读。
+核心为`ECMAScript`。`Web API` 为浏览器以及文档转换而来的`API`接口操作。现在的`js`多了`node`这个平台，那么还有一些操作系统环境的`API`即`Global`部分。在这儿不多做介绍了，具体内容移步`node`部分阅读。
