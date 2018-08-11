@@ -69,3 +69,15 @@ vi ~/.bash_profile
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 ```
 
+### 系统环境变量配置
+
+​	最近重新配置了一遍 `nvm` 发现在 `OS X` 系统中的其他用户配置时会出现不会自动写入环境变量的配置问题，特此补充。（可能`linux`用户 配置的时候也会出现此问题，不确定）。附完整的系统环境配置文件内容。`linux` 用户配置 `.bashrc` ， `OS X` 用户配置 `.bash_profile` 文件， `windows` 用户自行摸索一下，应该没有这个问题。
+
+```bash
+# nvm about
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
