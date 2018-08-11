@@ -64,3 +64,4 @@ package-lock.json
 .project
 
 .idea/
+.DS_Store
