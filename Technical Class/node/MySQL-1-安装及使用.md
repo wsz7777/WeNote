@@ -93,7 +93,7 @@ $ cd /Volumes/jacky/web-sd/nodeStudy/mysql01
 $ node test.js
 ```
 
-![node-mysql-link](./images/node-mysql-link.png)
+![node-mysql-link](./assets/node-mysql-link.png)
 
 ## 简单使用
 
@@ -135,5 +135,5 @@ db.end((err) => {
 
 控制台输出结果如下图：
 
-![node-mysql-link](./images/node-mysql-link2.png)
+![node-mysql-link](./assets/node-mysql-link2.png)
 

@@ -11,34 +11,34 @@
 > cmd+shift+p 打开开发者命令调用
 > 输入screen
 > 选择下图标红处
-> ![截图](./images/chrome-screen-all.png)
+> ![截图](./assets/chrome-screen-all.png)
 > 最后在下载中找到刚刚下好的截图就ok啦
 
 截图效果如下：
 
-![](./images/chrome-screen-xg-all.png)
+![](./assets/chrome-screen-xg-all.png)
 
 
 
 ## 截取某个dom节点的截图
 
 > 开始前两步相同，在打开命令截图之前请在 `Elements` 中点击一下你要选中的元素，如下：
-> ![选择节点](./images/chrome-screen-choosenode.png)
+> ![选择节点](./assets/chrome-screen-choosenode.png)
 > 注：红色标注部分左边的是选择的元素图像，右边的是选中的节点。
 > 还是cmd+shift+p打开命令工具
 > 这次选择：
-> ![选择](./images/chrome-screen-node.png)
+> ![选择](./assets/chrome-screen-node.png)
 
 截图效果如下：
 
-![](./images/chrome-screen-xg-node.png)
+![](./assets/chrome-screen-xg-node.png)
 
 
 
 ## 一般截图
 
 > 选择：
-> ![](./images/chrome-screen-now.png)
+> ![](./assets/chrome-screen-now.png)
 
 效果图：
-![](./images/chrome-screen-xg-now.png)
+![](./assets/chrome-screen-xg-now.png)
