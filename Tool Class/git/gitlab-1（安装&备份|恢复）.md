@@ -96,3 +96,43 @@ sudo gitlab-ctl start
 chmod 777 1551348773_2019_07_20_10.0.0-ee_gitlab_backup.tar
 ```
 
+## 升级
+
+### 下载软件包
+
+```bash
+wget --content-disposition https://packages.gitlab.com/gitlab/gitlab-ee/packages/ol/7/gitlab-ee-11.8.9-ee.0.el7.x86_64.rpm/download.rpm
+```
+
+### 关闭数据连接
+
+```bash
+gitlab-ctl stop unicorn
+gitlab-ctl stop sidekiq
+gitlab-ctl stop nginx
+```
+
+### 更新
+
+```bash
+rpm -Uvh gitlab-ee-11.8.9-ee.0.el7.x86_64.rpm
+```
+
+### 重启服务
+
+```bash
+sudo gitlab-ctl restart
+```
+
+### 注意！！！
+
+1. 迁移至新的服务器上，记得重改gitlab配置例如
+
+	```bash
+	vim /etc/gitlab/gitlab.rb
+	
+	# 把 http://gitlab.example.com 记得改掉
+	external_url 'http://gitlab.example.com'
+	```
+
+	
