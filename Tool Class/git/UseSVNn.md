@@ -97,6 +97,11 @@ svn revert <文件名/文件夹名>
 
 ## 处理问题
 
+### 更改svn仓库地址
+```bash
+svn switch --relocate [原地址] [目标地址]
+```
+
 ### 产生冲突
 
 ​	先更新（`update`）再提交（`commit`）。 `git` 中也同样先 `pull` 再 `push` 。
@@ -149,4 +154,5 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 - 状态     `svn st`
 - 删除     `svn delete <fileName>`
 - 撤销     `svn revert <fileName>`
+- 更换地址  `svn switch --relocate [原地址] [目标地址]`
 - 冲突状态：先更新再解决~
