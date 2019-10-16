@@ -13,20 +13,20 @@
 
 ```bash
 # 创建 dev 分支
-git checkout -b dev
+$ git checkout -b dev
 Switched to a new branch 'dev'
 
 # 带参数-b相当于一下两条命令
-git branch dev
-git checkout dev
+$ git branch dev
+$ git checkout dev
 
 # 用下面命令查看当前状态
 
-git status
+$ git status
 On branch dev
 nothing to commit, working tree clean
 
-git branch
+$ git branch
 * dev
   master
 
@@ -38,15 +38,15 @@ git branch
 
 ```bash
 #　提交
-git add --all
-git commit -m "creat git-4 使用分支"
+$ git add --all
+$ git commit -m "creat git-4 使用分支"
 
 # 切回主分支
-git checkout master
+$ git checkout master
 Switched to branch 'master'
 
 # 合并至当前分支
-git merge dev
+$ git merge dev
 Updating 6c6e19b..8d4362f
 Fast-forward
  Tool Class/git/使用git-4（使用分支）.md | 41 +++++++++++++++++++++++++++++++++++++++++
@@ -54,31 +54,39 @@ Fast-forward
  create mode 100644 Tool Class/git/使用git-4（使用分支）.md
 
 # 删除开发分支
-git branch -d dev
+$ git branch -d dev
 Deleted branch dev (was 8d4362f).
 
 # 最后提交代码(gitee 是我的远程仓库名)
-git push gitee master
+$ git push gitee master
 ```
+
+### 合并无关历史的分支
+
+```bash
+$ git pull origin master --allow-unrelated-histories 
+```
+
+
 
 ## 小结
 
 ``` shell
 # 查看分支：
-git branch
+$ git branch
 
 # 创建分支：
-git branch <brachName>
+$ git branch <brachName>
 
 # 切换分支：
-git checkout <branchName>
+$ git checkout <branchName>
 
 # 创建+切换分支：
-git checkout -b <branchName>
+$ git checkout -b <branchName>
 
 # 合并某分支到当前分支：
-git merge <brachName>
+$ git merge <brachName>
 
 # 删除分支：
-git branch -d <branchName>
+$ git branch -d <branchName>
 ```
