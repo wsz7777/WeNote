@@ -132,3 +132,7 @@ sudo gitlab-ctl restart
 	# 把 http://gitlab.example.com 记得改掉
 	external_url 'http://gitlab.example.com'
 	```
+2. 查看当前生效的配置文件
+	```
+	/opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
+	```
