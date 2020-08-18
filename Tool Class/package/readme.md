@@ -22,6 +22,12 @@
 
  `homebrew` 是 `Mac OS` 中的包管理工具。
 
+## About Windows
+
+### choco
+
+一款`windows`的软件包管理工具
+
 
 
 ## About Node
@@ -30,9 +36,9 @@
 
  `npm` 是管理 `node` 模块中各种包的工具。
 
-### nvm
+### nvm/nvs
 
- `nvm` 是管理 `node` 版本的控制工具。
+ `nvm`/`nvs` 是管理 `node` 版本的控制工具。推荐使用`nvs`
 
 ### nrm
 
@@ -41,11 +47,3 @@
 ### yarn
 
  `yarn` 是在 `npm5` 出世之前最好的管理 `node` 模块中各种包的工具。
-
-
-
-## Other 
-
-### bower
-
-一款专用于前端的包管理工具。
