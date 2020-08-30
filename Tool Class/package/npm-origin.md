@@ -1,6 +1,9 @@
 [toc]
 
-# .npmrc 各种源
+# .npmrc 相关配置
+
+## 配置内容
+
 ```
 disturl=https://npm.taobao.org/dist
 nvm_nodejs_org_mirror=http://npm.taobao.org/mirrors/node
@@ -16,6 +19,12 @@ chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver
 operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver
 phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs
 fse_binary_host_mirror=https://npm.taobao.org/mirrors/fsevents
-home=https://www.npmjs.org
-registry=https://registry.npmjs.org/
+home=https://npm.taobao.org
+registry=https://registry.npm.taobao.org/
 ```
+
+## 配置项
+
+​	npm包安装时默认依赖的国外的镜像源，我们想在国内下载变快一点需要配置一下 `registry` 和 `home` 这个环境变量
+
+​	有些需要安装脚本来实现，并且需要一些额外的二进制库。所以需要配置额外的环境变量来实现使用国内镜像源
