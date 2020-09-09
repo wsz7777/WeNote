@@ -33,7 +33,7 @@ export default Vue.extend({
 
 ```jsx
 export default Vue.extend({
-	name: 'props-test',
+  name: 'props-test',
   props: {
     value: {
       type: String,
@@ -61,7 +61,7 @@ export default Vue.extend({
 
 ```jsx
 export default Vue.extend({
-	name: 'props-test',
+  name: 'props-test',
   props: {
     value: {
       type: Array,
