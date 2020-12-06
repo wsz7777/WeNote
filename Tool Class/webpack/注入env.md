@@ -19,6 +19,16 @@
 
 ## 使用
 
+先下载
+
+```bash
+npm i -D env-cmd dotenv-webpack
+# or
+yarn add --dev env-cmd dotenv-webpack
+```
+
+
+
 ### env-cmd
 
 ​	本来是想使用 [`cross-env`](https://github.com/kentcdodds/cross-env)  来实现环境变量的注入，然后在其readme中发现 `env-cmd` 可以方便的吧 `.env` 文件中描述的环境变量注入。两个库的命令对比如下：
@@ -44,6 +54,12 @@ PUBLIC_PATH=http://127.0.0.1:8000/static/
 ### dotenv-webpack
 
 ```js
+import Dotenv from 'dotenv-webpack';
+import path from 'path';
+//or
+//const Dotenv = require('dotenv-webpack');
+//const path = require('path');
+
 const EnvPath = path.join(
   process.cwd(),
   `/env/${process.env.BUILD_ENV_MODE || 'prod'}.env`,
@@ -57,9 +73,9 @@ module.exports = {
   ]
 }
 // 集成其他手脚架中需要使用 chainWebpack 添加插件
-chainWebpack(config) {
-  config.plugin('dotenv').use(new Dotenv({ path: EnvPath }));
-},
+//chainWebpack(config) {
+//  config.plugin('dotenv').use(new Dotenv({ path: EnvPath }));
+//},
 ```
 
 
