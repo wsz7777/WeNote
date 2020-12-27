@@ -50,7 +50,7 @@
 
 ​	一个完整的颜色选择器是由 展示（选择）色块、调色盘 两部分组成。其中 `element-ui`、`iview`、`vue-color-picker` 都封装了完整的颜色选择器。而 `vue-color`、`quasar` 只是提供了调色盘。
 
-## 
+
 
 ### 代码
 
