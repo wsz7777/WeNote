@@ -29,3 +29,9 @@ xcode-select --install
 4. Command + space 查找 Software Update 工具
 5. 点击更新
 6. 移除空文件 sudo rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+
+NOTE:
+
+You do not need to do it per project, but only once
+There was also discussion that you have to do it on every OSX update, in my case, later updating the OSX system didn't trigger this issue again
+Credits to: [gyp: No Xcode or CLT version detected macOS Catalina](https://medium.com/flawless-app-stories/gyp-no-xcode-or-clt-version-detected-macos-catalina-anansewaa-38b536389e8d)
